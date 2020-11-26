@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+{#    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">#}
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>{{ areq.id }}请假条</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1 style="font-size: 40px">请假条</h1>
+    <h3 style="font-size: 20px">请假条编号:{{ areq.id }}</h3>
+    <h3 style="font-size: 20px">请假申请人：{{ areq.stu.sname }}</h3>
+    <h3 style="font-size: 20px">请假申请人学院：{{ areq.stu.sinstitute }}</h3>
+    <h3 style="font-size: 20px">请假申请人导师：{{ areq.stu.ssupervisor }}</h3>
+    <h3 style="font-size: 20px">请假申请人联系电话：{{ areq.stu.sphone }}</h3>
+    <h3 style="font-size: 20px">请假申请原因：{{ areq.reason }}</h3>
+    <h3 style="font-size: 20px">请假申请时间段：{{ areq.timestart }}~{{ areq.timefinish }}</h3>
+    <br/>
+    <h3 style="font-size: 15px">防伪码:{{ areq.hash256 }}</h3>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
